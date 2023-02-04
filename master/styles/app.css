@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+  --fb-post-border: #088AE9;
+  --fb-post-bg: #262728;
+  --fb-post-color: #FFFFFF;
+  --fb-post: #FFFFFF;
+  --fb-post-btn-bg: #3A3B3C;
+  --fb-post-btn-color: #FFFFFF;
+  --fb-post-btn-bg-hover: #464849;
+  --fb-reactions-bg: #3A3B3C;
+}
+
+body {
+  background-image: url(../assets/thbg.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.facebook-post {
+  background-color: var(--fb-post-bg);
+  color: var(--fb-post-color);
+  width: 80%;
+  max-width: 500px;
+  border-radius: 2.5rem;
+  padding: 1.5rem;
+  border: 10px solid var(--fb-post-border);
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.15);
+}
+.facebook-post .post-header {
+  display: flex;
+  align-items: center;
+}
+.facebook-post .post-header .user-profile-image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--fb-post-color);
+  margin-right: 0.5rem;
+}
+.facebook-post .post-header .user-info span {
+  display: block;
+}
+.facebook-post .post-header .user-info span:last-of-type {
+  font-size: 0.7rem;
+  margin-top: -0.33rem;
+}
+.facebook-post .post-header img.icon {
+  filter: invert(1);
+  max-width: 15px;
+}
+.facebook-post .post-header img.icon:first-of-type {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.facebook-post .post {
+  height: 400px;
+  width: 100%;
+  background-color: var(--fb-post);
+  margin: 1rem auto;
+  border-radius: 2rem;
+}
+.facebook-post .post-interactions {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0 0.25rem;
+}
+.facebook-post .post-interactions button {
+  width: 100%;
+  padding: 0.5rem 0.33rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--fb-post-btn-bg);
+  color: var(--fb-post-btn-color);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.facebook-post .post-interactions button:hover {
+  background-color: var(--fb-post-btn-bg-hover);
+}
+.facebook-post .post-interactions button:hover span {
+  top: -62px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.facebook-post .post-interactions button span {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  background-color: var(--fb-reactions-bg);
+  border-radius: 5rem;
+  display: flex;
+  padding: 0.33rem;
+  gap: 0.25rem;
+  transition: top 0.3s 0.5s ease, opacity 0.3s 0.5s ease;
+}
+.facebook-post .post-interactions button span img {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.facebook-post .post-interactions button span img:hover {
+  transform: scale(1.3) translateY(-1rem);
+}/*# sourceMappingURL=app.css.map */
